@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes!</title>
+    <link rel="stylesheet" href="yes_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <div class="container">
+        <h1 class="header_text">Why not this!</h1>
+        <div class="gif_container">
+            <video width="400" height="240" autoplay="autoplay" class="video_player" id="player"  loop >
+                <source src="src/0215.mp4" type="video/mp4">
+              </video>
+              <button class="button" onclick="goFullscreen('player'); return false">
+                full screen mei dek
+              </button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function goFullscreen(id) {
+          var element = document.getElementById(id);       
+          if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+          } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+          }  
+        }
+        </script>
+</body> 
+</html>
